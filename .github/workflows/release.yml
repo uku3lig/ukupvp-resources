@@ -1,0 +1,19 @@
+name: Build resource pack
+
+on:
+  release:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v4
+      - name: Build resource pack
+        run: |
+          sed -i "s/%VERSION%/${{ github.event.release.tag_name }}/" pack.mcmeta
+          zip -r ukupvp-resources.zip assets/ pack.*
+      - name: Upload artifact to release
+        run: gh release upload ${{ github.event.release.tag_name }} ukupvp-resources.zip
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

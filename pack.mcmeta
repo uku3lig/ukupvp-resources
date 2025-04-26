@@ -1,0 +1,26 @@
+{
+  "pack": {
+    "description": [
+      {
+        "text": "Common resources for\n",
+        "color": "yellow"
+      },
+      {
+        "text": "uku's",
+        "color": "#895CC6",
+        "bold": true
+      },
+      {
+        "text": " pvp modpack",
+        "color": "gray",
+        "bold": true
+      },
+      {
+        "text": " (%VERSION%)",
+        "color": "dark_gray"
+      }
+    ],
+    "pack_format": 55,
+    "supported_formats": [15, 55]
+  }
+}
