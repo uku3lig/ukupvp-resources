@@ -2,6 +2,7 @@ name: Build resource pack
 
 on:
   release:
+    types: [published]
 
 jobs:
   build:
